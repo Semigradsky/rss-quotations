@@ -13,7 +13,11 @@ export default {
     const quote = getQuote(lang)
 
     return new Response(JSON.stringify(quote), {
-      headers: { 'Content-Type': 'application/json' },
+      headers: {
+        'Content-Type': 'application/json',
+        'Access-Control-Allow-Origin': '*',
+        'Access-Control-Allow-Methods': 'GET'
+      },
     });
   }
 }
