@@ -11,7 +11,7 @@ export default {
     const { pathname } = new URL(request.url);
     const lang = pathname.startsWith('/en') ? 'en' : 'be'
     const quote = getQuote(lang)
-  
+
     return new Response(JSON.stringify(quote), {
       headers: { 'Content-Type': 'application/json' },
     });
@@ -19,12 +19,20 @@ export default {
 }
 
 /**
- * @param {string} lang 
+ * @param {string} lang
  */
 function getQuote(lang) {
   const quotes = lang === 'en'
     ? enQuotes
     : beQuotes
 
-  return quotes[0]
+  return quotes[randomNumber(0, quotes.length)]
+}
+
+/**
+ * @param {number} min
+ * @param {number} max
+ */
+function randomNumber(min, max) {
+  return Math.floor(Math.random() * (max - min) + min);
 }
