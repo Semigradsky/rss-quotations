@@ -4,5 +4,9 @@
   "main": "index.js",
   "repository": "git@github.com:Semigradsky/rss-quotations.git",
   "author": "Dmitry Semigradsky <semigradskyd@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "scripts": {
+    "start": "wrangler dev",
+    "publish": "wrangler publish"
+  }
 }
