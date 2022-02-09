@@ -2,11 +2,16 @@
   "name": "rss-quotations",
   "version": "1.0.0",
   "main": "index.js",
+  "type": "module",
   "repository": "git@github.com:Semigradsky/rss-quotations.git",
   "author": "Dmitry Semigradsky <semigradskyd@gmail.com>",
   "license": "MIT",
   "scripts": {
     "start": "wrangler dev",
+    "prepublish": "node generate-quotes",
     "publish": "wrangler publish"
+  },
+  "devDependencies": {
+    "js-yaml": "^4.1.0"
   }
 }

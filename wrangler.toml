@@ -6,3 +6,12 @@ workers_dev = true
 route = ""
 zone_id = ""
 compatibility_date = "2022-02-09"
+
+[build.upload]
+format = "modules"
+dir = "./api"
+main = "./index.js"
+
+[[build.upload.rules]]
+type = "ESModule"
+globs = ["**/*.js"]
