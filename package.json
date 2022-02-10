@@ -1,6 +1,6 @@
 {
   "name": "rss-quotations",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "main": "index.js",
   "type": "module",
   "repository": "git@github.com:Semigradsky/rss-quotations.git",
